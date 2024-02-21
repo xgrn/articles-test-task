@@ -1,0 +1,8 @@
+# Composer binary
+composer.phar
+
+# Composer vendor folder
+vendor
+
+# IntelliJ IDE folder
+.idea
