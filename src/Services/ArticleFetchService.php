@@ -18,11 +18,11 @@ class ArticleFetchService
     /**
      * @return Article[]
      */
-    public function fetchAllTitles(): array
+    public function fetchAllTitles(bool $withContent = false): array
     {
         $files = glob($this->params->getDataDir().ArticleLoader::ARTICLE_PATH.'/*.md');
-        return array_map(function (string $file) {
-            return $this->loader->loadTitle(basename($file));
+        return array_map(function (string $file) use($withContent) {
+            return $withContent ? $this->loader->loadArticle($file) : $this->loader->loadTitle(basename($file));
         }, $files);
     }
 }
