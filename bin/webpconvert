@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__.'/../vendor/autoload.php';
+
+use App\Kernel\ContainerFactory;
+use App\Services\ImageConverter;
+
+$container = ContainerFactory::createContainer();
+/** @var ImageConverter $converter */
+$converter = $container->get(ImageConverter::class);
+
+$converter->convertToWebp();
