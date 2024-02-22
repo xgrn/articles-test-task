@@ -1,0 +1,142 @@
+body {
+    font-family: Arial;
+}
+
+/* ARTICLE TABLE */
+
+.aa-article-list {
+    margin: 50px auto 0;
+    table-layout: fixed;
+    width: 95%;
+    max-width: 900px;
+    font-size: 16px;
+}
+
+.aa-article-list th {
+    background: #888;
+    color: #fff;
+}
+
+.aa-article-list td {
+    background: #eee;
+    transition: background-color .2s;
+}
+
+.aa-article-list tr:hover td {
+    background: #ddd;
+}
+
+.aa-article-list td,
+.aa-article-list th {
+    padding: 15px 25px;
+}
+
+.aa-article-ind {
+    width: 25px;
+    text-align: center;
+}
+.aa-article-actions {
+    width: 80px;
+    text-align: center;
+}
+.aa-article-actions button {
+    border-radius: 99px;
+    border: solid 1px #888;
+    padding: 5px 25px;
+    background: #eee;
+    transition: background-color .2s;
+    cursor: pointer;
+}
+
+.aa-article-actions button:hover {
+    background: #bbb;
+}
+
+.aa-article-actions button:active {
+    background: #999;
+}
+
+/* EDITOR MODAL */
+
+.aa-modal-hover {
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.aa-modal-content {
+    background: #fff;
+    min-width: 900px;
+    max-width: 95%;
+    border-radius: 26px;
+    padding: 10px 30px 30px;
+}
+
+.aa-modal-header {
+    position: relative;
+    padding: 20px 0;
+    border-bottom: solid 1px #ddd;
+}
+
+.aa-modal-title {
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial;
+    margin: 0;
+}
+
+.aa-modal-close {
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border: none;
+    background: none;
+    font-size: 28px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: color .2s;
+}
+
+.aa-modal-close:hover {
+    color: #888;
+}
+
+.aa-modal-close:active {
+    color: #000;
+}
+
+.aa-modal-editor textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 400px
+}
+
+.aa-modal-buttons {
+    padding-top: 30px;
+    text-align: right;
+}
+
+.aa-modal-save {
+    font-size: 18px;
+    border-radius: 99px;
+    border: solid 1px #888;
+    padding: 5px 50px;
+    cursor: pointer;
+    background: #eee;
+    transition: background-color .2s;
+}
+
+.aa-modal-save:hover:not(:disabled) {
+    background: #bbb;
+}
+
+.aa-modal-save:active:not(:disabled) {
+    background: #999;
+}
