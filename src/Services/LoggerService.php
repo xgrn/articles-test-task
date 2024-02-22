@@ -17,8 +17,16 @@ class LoggerService
     const CHANGES_LOG = 'audit.log';
     const ERROR_LOG = 'errors.log';
 
+    private $enabled = true;
+
+    public function disable(): void
+    {
+        $this->enabled = false;
+    }
+
     public function logChanges(string $filename, ArticleDiff $diff): void
     {
+        if(!$this->enabled) return;
         $row = sprintf(
             '[UPDATE] [%s] Filename: %s - Words %s: %d - Tables added: %d - Images added: %d',
             date_create()->format('c'), $filename, ($diff->words < 0) ? 'removed' : 'added',
