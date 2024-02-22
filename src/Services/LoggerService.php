@@ -27,7 +27,7 @@ class LoggerService
         $this->writeLog(self::CHANGES_LOG, $row);
     }
 
-    public function logError(\Exception $exception): void
+    public function logError(\Throwable $exception): void
     {
         $row = sprintf(
             '[ERROR] [%s] %s - File: %s, line %d',
