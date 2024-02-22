@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Article editing application</title>
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
         <link type="text/css" rel="stylesheet" href="/css/style.css">
         <script type="text/javascript" src="/js/script.js" defer async></script>
     </head>
