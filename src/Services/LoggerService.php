@@ -14,7 +14,7 @@ class LoggerService
     {
     }
 
-    const CHANGES_LOG = 'article_updates.log';
+    const CHANGES_LOG = 'audit.log';
     const ERROR_LOG = 'errors.log';
 
     public function logChanges(string $filename, ArticleDiff $diff): void
