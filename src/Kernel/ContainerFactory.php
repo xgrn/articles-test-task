@@ -10,11 +10,11 @@ use \DI;
 class ContainerFactory
 {
 
-    public static function createContainer(): ContainerInterface
+    public static function createContainer(array $override = []): ContainerInterface
     {
         $builder = new ContainerBuilder();
         $builder
-            ->addDefinitions(self::createDefinitions());
+            ->addDefinitions(self::createDefinitions() + $override);
         return $builder->build();
     }
 
